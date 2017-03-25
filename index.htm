@@ -1,9 +1,11 @@
 <html>
 <head>
+    <title>PIVX Frequently Asked Questions</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
@@ -31,12 +33,73 @@
 
 <div class="container">
 
+    <h1>General</h1>
+    <a href="#what-is-the-difference-between-pivx-and-piv" name="what-is-the-difference-between-pivx-and-piv"><h5>What
+        is the difference between PIVX and PIV</h5></a>
+    <p class="answer">
+        PIVX is the name of the currency, and PIV is the amount. Most Exchanges use PIVX for both though.
+    </p>
+
+    <a href="#is-pivx-a-fork-of-dash" name="is-pivx-a-fork-of-dash"><h5>Is PIVX a fork of DASH?</h5></a>
+    <p class="answer">
+        PIVX is a "code fork" of dash. There was no "hard fork" where the chain has split. If you want to know the
+        differences between PIVX and DASH, please visit <a href="https://pivx.org">pivx.org</a>.
+    </p>
+
+    <a href="#how-do-i-mine-pivx" name="how-do-i-mine-pivx"><h5>How do I mine PIVX?</h5></a>
+    <p class="answer">
+        In contrary to bitcoin, which is Proof Of Work (POW), PIVX is Proof Of Stake (POS). Instead of using a lot of
+        CPU power to create new coins, new PIV is created by having it and staking it. It can be compared to receiving
+        interest on your savings account.
+    </p>
+
     <h1>Wallet</h1>
-    <a href="#what-is-the-best-place-to-get-pivx" name="what-is-the-best-place-to-get-pivx"><h5>What is the best place to get PIVX?</h5></a>
+    <a href="#how-do-i-install-the-wallet" name="how-do-i-install-the-wallet"><h5>How do I install the wallet?</h5></a>
+    <p class="answer">Crypto Lanka has made a great youtube series about that. Have a look at <a
+            href="https://www.youtube.com/watch?v=2XARuxG-Ut4">part 1</a>, <a
+            href="https://www.youtube.com/watch?v=JVglq1fjibU">part 2</a> and <a
+            href="https://www.youtube.com/watch?v=GaSuxteyhfA">part 3</a>.</p>
+
+    <a href="#how-do-i-encrypt-my-wallet" name="how-do-i-encrypt-my-wallet"><h5>How do I encrypt my wallet?</h5></a>
+    <p class="answer">
+        Encrypting your wallet is a great idea to prevent other people using your computer to steal your money or your
+        <code>wallet.dat</code> file. Please don't forget the encryption password. If you lose it,
+        you can't access your funds.
+    </p>
+
+
+    <a href="#how-do-i-backup-my-wallet" name="how-do-i-backup-my-wallet"><h5>How do I backup my wallet?</h5></a>
+    <section class="answer">
+        <p>The most important thing in cryptocurrencies is backing up your wallet data! Always keep backups in multiple
+            places so your money is safe when somebody steals your computer or your house burns down.</p>
+        <p>That being said, There are two ways to backup your wallet. And you probably should do both.</p>
+        <p><b>Method 1</b> - Backup <code>wallet.dat</code>.
+        <ol>
+            <li>Make your your PIVX wallet application is closed.</li>
+            <li>Go to your PIVX wallet folder.</li>
+            <li>Copy the <code>wallet.dat</code> file and save it on a usb stick in a secure location. Remember: if your
+                wallet is unencrypted and it gets stolen, your PIV is not safe! You can backup the
+                <code>pivx.conf</code> file as well.
+            </li>
+        </ol>
+        <p><b>Method 2</b> - Backup your private keys.
+        <p class="answer">
+            You can find how to backup your private keys <a
+                href="https://forum.pivx.org/t/how-do-i-find-my-private-keys/292">here</a>. If you have
+            used the <code>masternode genkey</code> command, remember to backup that private key as well. It is good
+            practice
+            to print the private key and put it in a secure and external location. NEVER GIVE ANYONE YOUR PRIVATE KEYS.
+        </p>
+    </section>
+
+
+    <a href="#what-is-the-best-place-to-get-pivx" name="what-is-the-best-place-to-get-pivx"><h5>What is the best place
+        to get PIVX?</h5></a>
     <section class="answer">
         <p>The best place to get PIVX is <a href="https://bittrex.com/">BITTREX</a>.</p>
     </section>
-    <a href="#where-is-my-wallet-located" name="where-is-my-wallet-located"><h5>Where is my wallet data located?</h5></a>
+    <a href="#where-is-my-wallet-located" name="where-is-my-wallet-located"><h5>Where is my wallet data located?</h5>
+    </a>
     <section class="answer">
         <p>You can find your wallet in the following directory:</p>
         <p>- Windows: <code>%APPDATA%\PIVX\</code></p>
@@ -49,14 +112,18 @@
         <ol>
             <li>Close the wallet application</li>
             <li>Go to your wallet directory</li>
-            <li>BACKUP YOUR wallet.dat AND pivx.conf FILES ON AN EXTERNAL DRIVE AND KEEP IT IN A SAFE LOCATION</li>
+            <li>BACKUP YOUR <code>wallet.dat</code> AND <code>pivx.conf</code> FILES ON AN EXTERNAL DRIVE AND KEEP IT IN
+                A SAFE LOCATION
+            </li>
             <li>Remove the blocks and chainstate directories</li>
-            <li>Download the Pivx_Blockchain_Backup-***.zip file at the official PIVX Github page <a href="https://github.com/PIVX-Project/PIVX/releases">here</a></li>
+            <li>Download the Pivx_Blockchain_Backup-***.zip file at the official PIVX Github page <a
+                    href="https://github.com/PIVX-Project/PIVX/releases">here</a></li>
             <li>Unzip the file and put the new blocks and chainstate directories in your wallet directory</li>
             <li>Start your wallet</li>
         </ol>
     </section>
-    <a href="#blockchain-corrupted" name="blockchain-corrupted"><h5>Error: corrupted blockchain / Crashing wallet</h5></a>
+    <a href="#blockchain-corrupted" name="blockchain-corrupted"><h5>Error: corrupted blockchain / Crashing wallet</h5>
+    </a>
     <p class="answer">
         Any problems with crashing wallets, or corrupted blockchains: Follow the steps in 'Syncing is taking forever' to
         resync your blockchain.
@@ -64,13 +131,22 @@
 
     <h1>Masternode</h1>
     <a href="#how-to-setup-a-masternode" name="how-to-setup-a-masternode"><h5>How to setup a masternode?</h5></a>
-    <p class="answer">Follow the steps <a href="https://forum.pivx.org/t/unofficial-newbie-friendly-masternode-guide/132">here</a>.
-    It's for setting up two masternodes, but you can also use it to setup one.</p>
+    <p class="answer">Follow the steps <a
+            href="https://forum.pivx.org/t/unofficial-newbie-friendly-masternode-guide/132">here</a>.
+        It's for setting up two masternodes, but you can also use it to setup one. There is also a great video <a
+                href="https://www.youtube.com/watch?v=-GnwdKxBa1Q">here</a>.</p>
 
-    <a href="#how-much-do-you-earn-with-a-masternode" name="how-much-do-you-earn-with-a-masternode"><h5>How much do you earn with a masternode?</h5></a>
+    <a href="#how-much-do-you-earn-with-a-masternode" name="how-much-do-you-earn-with-a-masternode"><h5>How much do you
+        earn with a masternode?</h5></a>
     <p class="answer">
-        A masternode costs 10.000 PIV. You can see how much you earn <a href="http://178.254.23.111/~pub/DN/DN_masternode_payments_stats.html">here</a>.
+        A masternode costs 10.000 PIV. You can see how much you earn <a
+            href="http://178.254.23.111/~pub/DN/DN_masternode_payments_stats.html">here</a>.
     </p>
+
+    <a href="#which-port-does-the-pivx-masternode-use" name="which-port-does-the-pivx-masternode-use"><h5>Which port
+        does the PIVX masternode use?</h5></a>
+    <p class="answer">PIVX uses port 51470. Be sure to let your firewall only accept that port. If you use SSH, make
+        sure only your IP address can connect to the server.</p>
 
     <h1>Staking</h1>
     <a href="#what-is-staking" name="what-is-staking"><h5>What is staking?</h5></a>
@@ -79,10 +155,13 @@
         The more PIV you have, the more often you will earn a 'stake'.
     </p>
 
-    <a href="#how-much-do-you-earn-with-staking" name="how-much-do-you-earn-with-staking"><h5>How much do you earn with staking?</h5></a>
+    <a href="#how-much-do-you-earn-with-staking" name="how-much-do-you-earn-with-staking"><h5>How much do you earn with
+        staking?</h5></a>
     <p class="answer">
-        It depends. At the time of writing you get about 1 stake per 14 days if you have 1000 PIV in your wallet, and 1 stake per 1-2 days
-        if you have 10.000 PIV in your wallet. The stake earnings are shown on <a href="http://178.254.23.111/~pub/DN/DN_masternode_payments_stats.html">this</a> site.
+        It depends. At the time of writing you get about 1 stake per 14 days if you have 1000 PIV in your wallet, and 1
+        stake per 1-2 days
+        if you have 10.000 PIV in your wallet. The stake earnings are shown on <a
+            href="http://178.254.23.111/~pub/DN/DN_masternode_payments_stats.html">this</a> site.
     </p>
 
     <a href="#how-to-start-staking" name="how-to-start-staking"><h5>How to start staking?</h5></a>
@@ -91,7 +170,8 @@
         your computer/server for 24/7 (it can be offline about 50 minutes per day for updates/reboots).
     </p>
     <p class="answer">
-        To start staking have a look <a href="https://www.youtube.com/watch?v=XyIItTCTlZA">here</a>. If you're not running
+        To start staking have a look <a href="https://www.youtube.com/watch?v=XyIItTCTlZA">here</a>. If you're not
+        running
         windows, edit the pivx.conf file in your wallet directory and write <code>staking=1</code>.
     </p>
 
@@ -104,10 +184,13 @@
 
 </div>
 
-<div class="jumbotron" style="background-color: #3b2f4d; padding-left: 20%; padding-right: 20%; margin-bottom: 0; margin-top: 30px; color:white;">
+<div class="jumbotron"
+     style="background-color: #3b2f4d; padding-left: 20%; padding-right: 20%; margin-bottom: 0; margin-top: 30px; color:white;">
     <p>
-        This is an unofficial PIVX Frequently Asked Questions page made by me <code>@zanydu</code>. If you want to contribute
-        to this page, please contact me in the PIVX Slack or create a pull request at <a href="https://github.com/pivx-faq/pivx-faq">Github</a>.
+        This is an unofficial PIVX Frequently Asked Questions page made by me <code>@zanydu</code>. If you want to
+        contribute
+        to this page, please contact me in the PIVX Slack or create a pull request at <a
+            href="https://github.com/pivx-faq/pivx-faq">Github</a>.
     </p>
 </div>
 
