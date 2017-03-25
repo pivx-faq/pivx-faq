@@ -1,1 +1,116 @@
-index
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<style>
+    .answer {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+</style>
+
+<div class="jumbotron" style="background-color: #3b2f4d; padding-left: 20%; padding-right: 20%; color:white;">
+    <h1>PIVX Frequently Asked Questions</h1>
+    <p>
+        Because a lot of people where having the same questions in the Slack #support channel, I decided to collect them
+        in this document.
+    </p>
+    <p>
+        <a class="btn btn-lg btn-primary" href="https://www.pivx.org" role="button">Official website</a>
+    </p>
+</div>
+
+
+<div class="container">
+
+    <h1>Wallet</h1>
+    <a href="#what-is-the-best-place-to-get-pivx" name="what-is-the-best-place-to-get-pivx"><h5>What is the best place to get PIVX?</h5></a>
+    <section class="answer">
+        <p>The best place to get PIVX is <a href="https://bittrex.com/">BITTREX</a>.</p>
+    </section>
+    <a href="#where-is-my-wallet-located" name="where-is-my-wallet-located"><h5>Where is my wallet data located?</h5></a>
+    <section class="answer">
+        <p>You can find your wallet in the following directory:</p>
+        <p>- Windows: <code>%APPDATA%\PIVX\</code></p>
+        <p>- Linux: <code>~/.pivx/</code></p>
+        <p>- Mac: <code>~/Library/Application\ Support/PIVX/</code></p>
+    </section>
+    <a href="#syncing-is-taking-forever" name="syncing-is-taking-forever"><h5>Syncing is taking forever</h5></a>
+    <section class="answer">
+        <p>You can speed up syncing by downloading a backup of the blockchain:</p>
+        <ol>
+            <li>Close the wallet application</li>
+            <li>Go to your wallet directory</li>
+            <li>BACKUP YOUR wallet.dat AND pivx.conf FILES ON AN EXTERNAL DRIVE AND KEEP IT IN A SAFE LOCATION</li>
+            <li>Remove the blocks and chainstate directories</li>
+            <li>Download the Pivx_Blockchain_Backup-***.zip file at the official PIVX Github page <a href="https://github.com/PIVX-Project/PIVX/releases">here</a></li>
+            <li>Unzip the file and put the new blocks and chainstate directories in your wallet directory</li>
+            <li>Start your wallet</li>
+        </ol>
+    </section>
+    <a href="#blockchain-corrupted" name="blockchain-corrupted"><h5>Error: corrupted blockchain / Crashing wallet</h5></a>
+    <p class="answer">
+        Any problems with crashing wallets, or corrupted blockchains: Follow the steps in 'Syncing is taking forever' to
+        resync your blockchain.
+    </p>
+
+    <h1>Masternode</h1>
+    <a href="#how-to-setup-a-masternode" name="how-to-setup-a-masternode"><h5>How to setup a masternode?</h5></a>
+    <p class="answer">Follow the steps <a href="https://forum.pivx.org/t/unofficial-newbie-friendly-masternode-guide/132">here</a>.
+    It's for setting up two masternodes, but you can also use it to setup one.</p>
+
+    <a href="#how-much-do-you-earn-with-a-masternode" name="how-much-do-you-earn-with-a-masternode"><h5>How much do you earn with a masternode?</h5></a>
+    <p class="answer">
+        A masternode costs 10.000 PIV. You can see how much you earn <a href="http://178.254.23.111/~pub/DN/DN_masternode_payments_stats.html">here</a>.
+    </p>
+
+    <h1>Staking</h1>
+    <a href="#what-is-staking" name="what-is-staking"><h5>What is staking?</h5></a>
+    <p class="answer">
+        You can compare staking with bitcoin mining, but instead of using cpu power, you use your PIV to gain interest.
+        The more PIV you have, the more often you will earn a 'stake'.
+    </p>
+
+    <a href="#how-much-do-you-earn-with-staking" name="how-much-do-you-earn-with-staking"><h5>How much do you earn with staking?</h5></a>
+    <p class="answer">
+        It depends. At the time of writing you get about 1 stake per 14 days if you have 1000 PIV in your wallet, and 1 stake per 1-2 days
+        if you have 10.000 PIV in your wallet. The stake earnings are shown on <a href="http://178.254.23.111/~pub/DN/DN_masternode_payments_stats.html">this</a> site.
+    </p>
+
+    <a href="#how-to-start-staking" name="how-to-start-staking"><h5>How to start staking?</h5></a>
+    <p class="answer">
+        If you have a substantial amount of PIV, you should stake. It's safe and you get free PIV! You only have to run
+        your computer/server for 24/7 (it can be offline about 50 minutes per day for updates/reboots).
+    </p>
+    <p class="answer">
+        To start staking have a look <a href="https://www.youtube.com/watch?v=XyIItTCTlZA">here</a>. If you're not running
+        windows, edit the pivx.conf file in your wallet directory and write <code>staking=1</code>.
+    </p>
+
+    <h1>Other Questions</h1>
+    <a href="#find-us-at-slack" name="find-us-at-slack"><h5>Find us at Slack</h5></a>
+    <p class="answer">
+        If this FAQ didn't answer your question. Please find us at <a href="https://pivx.slack.com">pivx.slack.com</a>.
+        There is a special <code>#support</code> channel where we will answer all your questions!
+    </p>
+
+</div>
+
+<div class="jumbotron" style="background-color: #3b2f4d; padding-left: 20%; padding-right: 20%; margin-bottom: 0; margin-top: 30px; color:white;">
+    <p>
+        This is an unofficial PIVX Frequently Asked Questions page made by me <code>@zanydu</code>. If you want to contribute
+        to this page, please contact me in the PIVX Slack or create a pull request at <a href="https://github.com/pivx-faq/pivx-faq">Github</a>.
+    </p>
+</div>
+
+
+</body>
+</html>
